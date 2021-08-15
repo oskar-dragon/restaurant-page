@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*=======
+Global
+========*/
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/*======= 
+Typography
+=========*/
+
+/*=======
+Layout
+========*/
+
+/* Header */
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__image {
+  max-width: 80px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item + .nav__item {
+  padding-left: 1em;
+}
+
+.nav__link {
+  color: #000;
+  text-decoration: none;
+}
