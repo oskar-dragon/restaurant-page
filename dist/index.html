@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Mono:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <title>Trove</title>
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container container--flex">
         <img
           src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1486653555218-DVCX3DVTL6KP31OPTWW0/trove_logo-FINAL.png"
           alt=""
@@ -51,7 +51,11 @@
 
         <section class="menu">
           <div class="menu__item">
-            <img class="menu__image" src="" alt="" />
+            <img
+              class="menu__image"
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582207752538-2UPWY56QS6HDT01LELTU/Levy+Cafe+2.jpg"
+              alt=""
+            />
             <div class="menu__copy-block">
               <p class="copy__text">
                 A destination for innovative, seasonal brunch dishes alongside
@@ -63,7 +67,11 @@
           </div>
 
           <div class="menu__item">
-            <img class="menu__image" src="" alt="" />
+            <img
+              class="menu__image"
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582204257078-3MOGUC57UHXNNW80EEIU/Trove+Bakery+.jpg"
+              alt=""
+            />
             <div class="menu__copy-block">
               <p class="copy__text">
                 Est. 2011. Sourdough bakery + patisserie with a central focus on
@@ -74,7 +82,11 @@
           </div>
 
           <div class="menu__item">
-            <img class="menu__image" src="" alt="" />
+            <img
+              class="menu__image"
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582204279239-Z7UZCX9ZJ9E3G1VNRPCP/Trove.Bakery.jpg?format=1000w"
+              alt=""
+            />
             <div class="menu__copy-block">
               <p class="copy__text">
                 Shop our selection of handmade delectables for collection from
@@ -90,8 +102,8 @@
     </main>
 
     <footer>
-      <div class="container">
-        <h2>TROVE</h2>
+      <div class="container container--flex-column">
+        <h2 class="brand-name">TROVE</h2>
 
         <div class="social-media">
           <a href="#" class="social-media__link" target="_blank">Instagram</a>
@@ -100,7 +112,11 @@
 
         <div class="signup">
           <form class="signup-form">
-            <input type="signup-form__text" />
+            <input
+              type="text"
+              class="signup-form__text"
+              placeholder="Email address"
+            />
             <button class="btn signup-form--btn">SIGN UP</button>
           </form>
           <p class="signup__copy">

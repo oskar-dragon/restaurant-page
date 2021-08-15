@@ -1,3 +1,20 @@
+/* 
+Todo
+
+1. Add focus and hover states to buttons, menu and social media links
+2. Create other pages
+3. Create Media queries
+*/
+
+:root {
+  --clr-background: #fcfbf8;
+  --clr-accent: #f2d5b5c4;
+  --clr-text-dark: #171717cc;
+  --clr-text-light: #fff;
+  --clr-btn-dark: #171717cc;
+  --clr-btn-light: #ffffff8a;
+}
+
 *,
 *::before,
 *::after {
@@ -11,10 +28,12 @@ Global
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
+  background: var(--clr-background);
 }
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 ul {
@@ -31,9 +50,40 @@ li {
   max-width: 1200px;
 }
 
+button {
+  border: none;
+  border-radius: 3px;
+  padding: 0.7em 2em;
+  letter-spacing: 2px;
+}
+
+input[type="text"] {
+  border: 1px solid var(--clr-accent);
+  padding: 1em;
+  font-size: 1rem;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
 /*======= 
 Typography
 =========*/
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
 
 /*=======
 Layout
@@ -41,12 +91,137 @@ Layout
 
 /* Header */
 
+header {
+  margin: 1em 0;
+}
+
 .container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo__image {
-  max-width: 80px;
+.logo {
+  max-height: 70px;
+}
+
+.container--flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  width: 70%;
+}
+
+.nav__list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.nav__link {
+  font-size: 0.8rem;
+  color: var(--clr-text-dark);
+}
+
+/* Menu */
+
+.menu {
+  margin: 5em 0 3em 0;
+}
+
+.menu__image {
+  width: 85%;
+}
+
+.menu__copy-block {
+  width: 90%;
+  position: relative;
+  bottom: 60px;
+  left: 30px;
+  background: var(--clr-accent);
+  padding: 1.5em;
+}
+
+.copy__text {
+  color: var(--clr-text-light);
+  letter-spacing: 2px;
+}
+
+.copy__btn {
+  font-size: 0.75rem;
+  margin-top: 1em;
+  background: rgba(255, 255, 255, 0.54);
+}
+
+/* Footer */
+
+footer {
+  margin-bottom: 2em;
+}
+
+.container--flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin: 0;
+}
+
+.social-media {
+  margin: 4em 0;
+}
+
+.social-media__link {
+  font-size: 1.5rem;
+  color: var(--clr-text-dark);
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--clr-text-dark);
+}
+
+.social-media__link + .social-media__link {
+  margin-left: 1em;
+}
+
+/* Footer > Forms */
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form {
+  margin-bottom: 2em;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form--btn {
+  margin-top: 1.5em;
+  padding: 1.4em 3em;
+  background: #171717cc;
+  color: var(--clr-text-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.signup__copy {
+  text-align: center;
+  letter-spacing: 4px;
+  color: var(--clr-text-dark);
 }
