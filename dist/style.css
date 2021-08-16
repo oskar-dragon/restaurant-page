@@ -1,9 +1,7 @@
 /* 
 Todo
 
-1. Add focus and hover states to buttons, menu and social media links
-2. Create other pages
-3. Create Media queries
+3. Create other pages
 */
 
 :root {
@@ -29,6 +27,7 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
   background: var(--clr-background);
+  font-size: 1rem;
 }
 
 img {
@@ -44,28 +43,42 @@ li {
   list-style: none;
 }
 
-.container {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1200px;
-}
-
 button {
   border: none;
   border-radius: 3px;
   padding: 0.7em 2em;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 
 input[type="text"] {
   border: 1px solid var(--clr-accent);
-  padding: 1em;
-  font-size: 1rem;
+  padding: 1.5em;
+  width: 80%;
 }
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.3);
-  letter-spacing: 1px;
+  letter-spacing: 4px;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 1500px);
+}
+
+.container--flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container--flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*======= 
@@ -77,12 +90,22 @@ h2 {
 }
 
 p {
-  font-size: 0.8rem;
   margin: 0;
 }
 
 a {
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover,
+a:focus {
+  color: #00000083;
+}
+
+h2 {
+  font-weight: 300;
+  margin: 0;
 }
 
 /*=======
@@ -92,24 +115,11 @@ Layout
 /* Header */
 
 header {
-  margin: 1em 0;
-}
-
-.container-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 1em;
 }
 
 .logo {
   max-height: 70px;
-}
-
-.container--flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .nav {
@@ -123,15 +133,24 @@ header {
   align-items: flex-end;
 }
 
+.nav__item {
+  margin-bottom: 0.5em;
+}
+
 .nav__link {
-  font-size: 0.8rem;
   color: var(--clr-text-dark);
+}
+
+/* Main */
+
+main {
+  margin: 5em 0;
 }
 
 /* Menu */
 
 .menu {
-  margin: 5em 0 3em 0;
+  margin-top: 5em;
 }
 
 .menu__image {
@@ -153,29 +172,27 @@ header {
 }
 
 .copy__btn {
-  font-size: 0.75rem;
   margin-top: 1em;
   background: rgba(255, 255, 255, 0.54);
+  transition: background 0.2s;
+}
+
+.copy__btn:focus,
+.copy__btn:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* Footer */
 
-footer {
-  margin-bottom: 2em;
-}
-
-.container--flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+footer > .container {
+  padding: 3em 0;
+  border-top: 1px solid var(--clr-btn-dark);
 }
 
 .brand-name {
-  font-size: 1.3rem;
+  letter-spacing: 15px;
+  font-size: 1.2rem;
   font-weight: 300;
-  letter-spacing: 10px;
-  margin: 0;
 }
 
 .social-media {
@@ -183,45 +200,69 @@ footer {
 }
 
 .social-media__link {
-  font-size: 1.5rem;
   color: var(--clr-text-dark);
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   border-bottom: 1px solid var(--clr-text-dark);
 }
 
 .social-media__link + .social-media__link {
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 /* Footer > Forms */
 
-.signup {
+.signup-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 2em;
 }
 
-.signup-form {
-  margin-bottom: 2em;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.signup-form__text {
+  margin-bottom: 1em;
 }
 
 .signup-form--btn {
-  margin-top: 1.5em;
   padding: 1.4em 3em;
   background: #171717cc;
   color: var(--clr-text-light);
-  font-size: 0.8rem;
   font-weight: 700;
+  transition: background 0.2s;
+}
+
+.signup-form--btn:focus,
+.signup-form--btn:hover {
+  background: #17171793;
 }
 
 .signup__copy {
   text-align: center;
   letter-spacing: 4px;
   color: var(--clr-text-dark);
+}
+
+/* Media Query */
+
+@media (min-width: 700px) {
+  body {
+    font-size: 1.025rem;
+  }
+  .nav__list {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav__item + .nav__item {
+    margin-left: 1.5em;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu__item {
+    width: 30%;
+  }
 }
