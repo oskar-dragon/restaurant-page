@@ -7,96 +7,133 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Mono:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Trove</title>
   </head>
+
   <body>
     <header>
-      <div class="container">
-        <div class="logo">
-          <img
-            class="logo__image"
-            src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1486653555218-DVCX3DVTL6KP31OPTWW0/trove_logo-FINAL.png"
-            alt="logo"
-          />
-        </div>
+      <div class="container container--flex">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1486653555218-DVCX3DVTL6KP31OPTWW0/trove_logo-FINAL.png"
+          alt=""
+          class="logo"
+        />
+
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="#">Our Cafes</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">The Bakery</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Our cafes</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">The bakery</a>
+            </li>
             <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Careers</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Contact Us</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Contact us</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="main">
+    <main>
       <div class="container">
-        <section class="hero-image">
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1615548013753-CVPINXNQH4D0H22I4CG2/Trove_web_banner2021new.jpg"
-            alt="hero-image"
-          />
+        <section class="article">
+          <h1 class="artile__title">Our Cafes + Shop</h1>
+          <p class="article__subtitle">Est. 2011. Manchester</p>
+
+          <p class="article__copy">
+            A destination for innovative, seasonal brunch dishes alongside our
+            freshly baked sourdough, pastries, cakes, jams + chutneys, all made
+            in house by our team.
+          </p>
         </section>
 
-        <section class="offers">
-          <div class="offer">
-            <img
-              class="offer__image"
-              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582207752538-2UPWY56QS6HDT01LELTU/Levy+Cafe+2.jpg"
-              alt=""
-            />
-            <div class="offer__wrapper">
-              <p class="offer__text"></p>
-              <button class="btn offer__btn">our cafes</button>
-            </div>
+        <section class="restaurant">
+          <h2 class="restaurant__title">Trove Ancoats</h2>
+          <p class="restaurant__address">
+            5 Murray Street, Ancoats, Manchester, M4 6HS
+          </p>
+
+          <div class="restaurant__btns">
+            <button class="btn btn--accent">brunch menu</button>
+            <button class="btn btn--accent">book a table</button>
           </div>
 
-          <div class="offer">
+          <div>
             <img
-              class="offer__image"
-              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582204257078-3MOGUC57UHXNNW80EEIU/Trove+Bakery+.jpg"
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026305259-1PXFAS29OV916WBSR7RI/Trove+Ancoats_Image+1.JPG"
               alt=""
             />
-            <div class="offer__wrapper">
-              <p class="offer__text"></p>
-              <button class="btn offer__btn">the bakery</button>
-            </div>
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026328354-E0TE9QKPGIUPG8OMNFMG/1c8d0221-931e-47e0-aefa-36f1eccf0833+2.jpg"
+              alt=""
+            />
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1584357018940-Q906YBKE1BNJKR1RZMT4/IMG_8325.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <section class="restaurant">
+          <h2 class="restaurant__title">Trove Levenshulme</h2>
+          <p class="restaurant__address">
+            1032-1034 Stockport Rd, Levenshulme, Manchester, M19 3WX
+          </p>
+
+          <div class="restaurant__btns">
+            <button class="btn btn--accent">brunch menu</button>
+            <button class="btn btn--accent">book a table</button>
           </div>
 
-          <div class="offer">
+          <div>
             <img
-              class="offer__image"
-              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582204279239-Z7UZCX9ZJ9E3G1VNRPCP/Trove.Bakery.jpg"
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026438220-7QGZU06NOJI27OGWFMAI/Levy+Cafe.jpg"
               alt=""
             />
-            <div class="offer__wrapper">
-              <p class="offer__text"></p>
-              <button class="btn offer__btn">online shop</button>
-            </div>
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026476109-9EH0NQ7FTSBNDM4DUF1J/JM-TROVE-PRESS-18.JPG"
+              alt=""
+            />
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1584357109518-JTMTJLU9L8MI1A0GPW18/IMG_7359.jpg"
+              alt=""
+            />
           </div>
         </section>
       </div>
     </main>
 
     <footer>
-      <div class="container">
-        <h2>Trove</h2>
+      <div class="container container--flex-column">
+        <p class="brand-name">TROVE</p>
+
         <div class="social-media">
-          <a href="#" class="social-media__link">Instagram</a>
-          <a href="#" class="social-media__link">Twitter</a>
+          <a href="#" class="social-media__link" target="_blank">Instagram</a>
+          <a href="#" class="social-media__link" target="_blank">Twitter</a>
         </div>
-        <div class="subscribtion">
-          <form>
-            <input type="text" />
-            <input type="submit" />
+
+        <div class="signup">
+          <form class="signup-form">
+            <input
+              type="text"
+              class="signup-form__text"
+              placeholder="Email address"
+            />
+            <button class="btn signup-form--btn">SIGN UP</button>
           </form>
-          <p class="subscrition text">Sign up to our newsletter to receive all the news, events and updates</p>
+          <p class="signup__copy">
+            Sign up to our newsletter to receive all the news, events and
+            updates
+          </p>
         </div>
       </div>
-      <p class="photography">Photography by <a href="#">Jordan Michael</a></p>
     </footer>
     <script src="main.js"></script>
   </body>
