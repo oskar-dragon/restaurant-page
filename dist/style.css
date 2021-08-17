@@ -1,7 +1,8 @@
 /* 
 Todo
 
-3. Create other pages
+1. Change logo so it is clickable and takes to the main webpage
+2. fix widths of content so it is not that wide
 */
 
 :root {
@@ -27,7 +28,9 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
   background: var(--clr-background);
-  font-size: 1rem;
+  font-size: 0.8rem;
+  color: var(--clr-text-dark);
+  letter-spacing: 4px;
 }
 
 img {
@@ -43,14 +46,6 @@ li {
   list-style: none;
 }
 
-button {
-  border: none;
-  border-radius: 3px;
-  padding: 0.7em 2em;
-  letter-spacing: 2px;
-  cursor: pointer;
-}
-
 input[type="text"] {
   border: 1px solid var(--clr-accent);
   padding: 1.5em;
@@ -59,7 +54,6 @@ input[type="text"] {
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.3);
-  letter-spacing: 4px;
 }
 
 .container {
@@ -81,13 +75,17 @@ input[type="text"] {
   justify-content: center;
 }
 
+.btn {
+  border: none;
+  border-radius: 3px;
+  padding: 1em 2.5em;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
 /*======= 
 Typography
 =========*/
-
-h2 {
-  font-weight: 400;
-}
 
 p {
   margin: 0;
@@ -95,7 +93,6 @@ p {
 
 a {
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 a:hover,
@@ -104,7 +101,7 @@ a:focus {
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -114,7 +111,7 @@ Layout
 
 /* Header */
 
-header {
+.page-head {
   margin-top: 1em;
 }
 
@@ -134,11 +131,20 @@ header {
 }
 
 .nav__item {
-  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.nav__item + .nav__item {
+  margin-top: 0.5em;
 }
 
 .nav__link {
-  color: var(--clr-text-dark);
+  color: inherit;
+}
+
+.nav__link {
+  transition: color 0.2s;
 }
 
 /* Main */
@@ -147,17 +153,17 @@ main {
   margin: 10em 0;
 }
 
-/* Menu */
+/* box */
 
-.menu {
+.boxes {
   margin-top: 5em;
 }
 
-.menu__image {
+.box__image {
   width: 85%;
 }
 
-.menu__copy-block {
+.box__body-block {
   width: 90%;
   position: relative;
   bottom: 60px;
@@ -166,19 +172,18 @@ main {
   padding: 1.5em;
 }
 
-.copy__text {
+.box__body-text {
   color: var(--clr-text-light);
-  letter-spacing: 2px;
 }
 
-.copy__btn {
+.btn--body {
   margin-top: 1em;
-  background: rgba(255, 255, 255, 0.54);
+  background: #ffffff8a;
   transition: background 0.2s;
 }
 
-.copy__btn:focus,
-.copy__btn:hover {
+.btn--body:focus,
+.btn--body:hover {
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -200,7 +205,7 @@ footer > .container {
 }
 
 .social-media__link {
-  color: var(--clr-text-dark);
+  color: inherit;
   font-weight: 300;
   letter-spacing: 5px;
   border-bottom: 1px solid var(--clr-text-dark);
@@ -210,7 +215,7 @@ footer > .container {
   margin-left: 2em;
 }
 
-/* Footer > Forms */
+/* Footer > Signup form */
 
 .signup-form {
   display: flex;
@@ -223,7 +228,7 @@ footer > .container {
   margin-bottom: 1em;
 }
 
-.signup-form--btn {
+.btn--signup-form {
   padding: 1.4em 3em;
   background: #171717cc;
   color: var(--clr-text-light);
@@ -238,16 +243,63 @@ footer > .container {
 
 .signup__copy {
   text-align: center;
-  letter-spacing: 4px;
   color: var(--clr-text-dark);
+}
+
+/* ====================== *\
+          Our Cafes
+\* ====================== */
+
+.content-section + .content-section {
+  margin: 6em 0;
+}
+.section__title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.section__subtitle {
+  margin-bottom: 4em;
+}
+
+.section__body {
+  margin-bottom: 7em;
+}
+
+.section__buttons {
+  margin-bottom: 2em;
+}
+
+.btn--section {
+  background: none;
+  border: 2px solid #e4c2548a;
+  color: #e4c2548a;
+}
+
+.btn--section:focus,
+.btn--section:hover {
+  color: var(--clr-text-light);
+  background: #e4c2548a;
+}
+
+.section__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 5em;
+}
+
+.section__image {
+  max-width: 30%;
 }
 
 /* Media Query */
 
 @media (min-width: 700px) {
   body {
-    font-size: 1.025rem;
+    font-size: 0.9rem;
   }
+
   .nav__list {
     flex-direction: row;
     justify-content: flex-end;
@@ -255,14 +307,19 @@ footer > .container {
 
   .nav__item + .nav__item {
     margin-left: 1.5em;
+    margin-top: 0;
   }
 
-  .menu {
+  .boxes {
     display: flex;
     justify-content: space-between;
   }
 
-  .menu__item {
+  .box__item {
     width: 30%;
+  }
+
+  .content-section--md {
+    width: 50%;
   }
 }

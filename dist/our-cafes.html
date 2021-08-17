@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trove</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,11 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Mono:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Trove</title>
   </head>
 
   <body>
-    <header>
+    <header class="page-head">
       <div class="container container--flex">
         <img
           src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1486653555218-DVCX3DVTL6KP31OPTWW0/trove_logo-FINAL.png"
@@ -26,13 +26,17 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">Our cafes</a>
+              <a class="nav__link" href="./our-cafes.html">Our cafes</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">The bakery</a>
+              <a class="nav__link" href="./bakery.html">The bakery</a>
             </li>
-            <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Careers</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Events</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Careers</a>
+            </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Contact us</a>
             </li>
@@ -41,76 +45,106 @@
       </div>
     </header>
 
-    <main>
+    <main class="page-content">
       <div class="container">
-        <section class="article">
-          <h1 class="artile__title">Our Cafes + Shop</h1>
-          <p class="article__subtitle">Est. 2011. Manchester</p>
-
-          <p class="article__copy">
+        <section class="content-section content-section--md">
+          <h2 class="section__title">Our Cafes + Shop</h2>
+          <p class="section__subtitle">Est. 2011, Manchester</p>
+          <p class="section__body">
             A destination for innovative, seasonal brunch dishes alongside our
             freshly baked sourdough, pastries, cakes, jams + chutneys, all made
             in house by our team.
           </p>
         </section>
 
-        <section class="restaurant">
-          <h2 class="restaurant__title">Trove Ancoats</h2>
-          <p class="restaurant__address">
+        <section class="content-section">
+          <h2 class="section__title">Trove Ancoats</h2>
+          <p class="section__subtitle">
             5 Murray Street, Ancoats, Manchester, M4 6HS
           </p>
 
-          <div class="restaurant__btns">
-            <button class="btn btn--accent">brunch menu</button>
-            <button class="btn btn--accent">book a table</button>
+          <div class="section__buttons">
+            <button class="btn btn--section">brunch menu</button>
+            <button class="btn btn--section">book a table</button>
           </div>
 
-          <div>
+          <div class="section__images">
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026305259-1PXFAS29OV916WBSR7RI/Trove+Ancoats_Image+1.JPG"
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026305259-1PXFAS29OV916WBSR7RI/Trove+Ancoats_Image+1.JPG?"
               alt=""
+              class="section__image"
             />
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026328354-E0TE9QKPGIUPG8OMNFMG/1c8d0221-931e-47e0-aefa-36f1eccf0833+2.jpg"
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026328354-E0TE9QKPGIUPG8OMNFMG/1c8d0221-931e-47e0-aefa-36f1eccf0833+2.jpg?"
               alt=""
+              class="section__image"
             />
             <img
               src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1584357018940-Q906YBKE1BNJKR1RZMT4/IMG_8325.jpg"
               alt=""
+              class="section__image"
             />
           </div>
         </section>
 
-        <section class="restaurant">
-          <h2 class="restaurant__title">Trove Levenshulme</h2>
-          <p class="restaurant__address">
+        <section class="content-section">
+          <h2 class="section__title">Trove Levenshulme</h2>
+          <p class="section__subtitle">
             1032-1034 Stockport Rd, Levenshulme, Manchester, M19 3WX
           </p>
 
-          <div class="restaurant__btns">
-            <button class="btn btn--accent">brunch menu</button>
-            <button class="btn btn--accent">book a table</button>
+          <div class="section__buttons">
+            <button class="btn btn--section">brunch menu</button>
+            <button class="btn btn--section">book a table</button>
           </div>
 
-          <div>
+          <div class="section__images">
             <img
               src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026438220-7QGZU06NOJI27OGWFMAI/Levy+Cafe.jpg"
               alt=""
+              class="section__image"
             />
             <img
               src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1582026476109-9EH0NQ7FTSBNDM4DUF1J/JM-TROVE-PRESS-18.JPG"
               alt=""
+              class="section__image"
             />
             <img
               src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1584357109518-JTMTJLU9L8MI1A0GPW18/IMG_7359.jpg"
               alt=""
+              class="section__image"
+            />
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section__title">Trove Marble Street</h2>
+          <p class="section__subtitle">
+            5 Murray Street, Ancoats, Manchester, M4 6HS
+          </p>
+
+          <div class="section__images">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1622201816321-0U6ZWMD87KFHXIOMEHS9/IMG_7995.jpg"
+              alt=""
+              class="section__image"
+            />
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1622201814819-GZRT07S5NNPDC6AR54NW/IMG_7990.jpg"
+              alt=""
+              class="section__image"
+            />
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5874bb36f5e231cac816465e/1622201818600-NWTNMGA0NHNRNLD4BATM/IMG_7999.jpg"
+              alt=""
+              class="section__image"
             />
           </div>
         </section>
       </div>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="container container--flex-column">
         <p class="brand-name">TROVE</p>
 
@@ -126,7 +160,7 @@
               class="signup-form__text"
               placeholder="Email address"
             />
-            <button class="btn signup-form--btn">SIGN UP</button>
+            <button class="btn btn--signup-form">SIGN UP</button>
           </form>
           <p class="signup__copy">
             Sign up to our newsletter to receive all the news, events and
