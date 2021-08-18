@@ -2,7 +2,6 @@
 Todo
 
 1. Change logo so it is clickable and takes to the main webpage
-2. fix widths of content so it is not that wide
 */
 
 :root {
@@ -12,6 +11,9 @@ Todo
   --clr-text-light: #fff;
   --clr-btn-dark: #171717cc;
   --clr-btn-light: #ffffff8a;
+  --clr-btn-gold: #e4c2548a;
+  --clr-placeholder: #0000004d;
+  --text-letterspacing-3: 3px;
 }
 
 *,
@@ -30,7 +32,7 @@ body {
   background: var(--clr-background);
   font-size: 0.8rem;
   color: var(--clr-text-dark);
-  letter-spacing: 4px;
+  letter-spacing: var(--text-letterspacing-3);
 }
 
 img {
@@ -53,7 +55,8 @@ input[type="text"] {
 }
 
 ::placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--clr-placeholder);
+  letter-spacing: var(--text-letterspacing-3);
 }
 
 .container {
@@ -79,7 +82,7 @@ input[type="text"] {
   border: none;
   border-radius: 3px;
   padding: 1em 2.5em;
-  letter-spacing: 3px;
+  letter-spacing: var(--text-letterspacing-3);
   cursor: pointer;
 }
 
@@ -97,7 +100,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #00000083;
+  color: var(--clr-placeholder);
 }
 
 h2 {
@@ -207,7 +210,7 @@ footer > .container {
 .social-media__link {
   color: inherit;
   font-weight: 300;
-  letter-spacing: 5px;
+  letter-spacing: var(--text-letterspacing-3);
   border-bottom: 1px solid var(--clr-text-dark);
 }
 
@@ -247,8 +250,12 @@ footer > .container {
 }
 
 /* ====================== *\
-          Our Cafes
+    Our Cafes and Bakery
 \* ====================== */
+
+.content-section {
+  line-height: 3;
+}
 
 .content-section + .content-section {
   margin: 6em 0;
@@ -272,14 +279,14 @@ footer > .container {
 
 .btn--section {
   background: none;
-  border: 2px solid #e4c2548a;
-  color: #e4c2548a;
+  border: 2px solid var(--clr-btn-gold);
+  color: var(--clr-btn-gold);
 }
 
 .btn--section:focus,
 .btn--section:hover {
   color: var(--clr-text-light);
-  background: #e4c2548a;
+  background: var(--clr-btn-gold);
 }
 
 .section__images {
