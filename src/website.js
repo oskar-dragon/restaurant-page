@@ -1,4 +1,6 @@
 import createMain from "./main-page.js";
+import createBakery from "./bakery.js";
+import createOurCafes from "./our-cafes.js";
 
 export { createHeader, createMainPage, createFooter };
 
@@ -38,7 +40,7 @@ function createNav() {
   let pages = [
     {
       name: "Our cafes",
-      id: "our-fafes",
+      id: "our-cafes",
     },
     {
       name: "The bakery",
@@ -71,6 +73,7 @@ function createNav() {
     liEl.classList.add("nav__item");
     aEl.classList.add("nav__link");
     aEl.setAttribute("id", page.id);
+    aEl.setAttribute("href", "#");
 
     aEl.addEventListener("click", e => {
       console.log(e.target.id);
@@ -91,7 +94,7 @@ function createMainPage() {
   const mainEl = document.createElement("main");
   mainEl.classList.add("page-content");
 
-  mainEl.appendChild(createMain());
+  mainEl.appendChild(createOurCafes());
 
   return mainEl;
 }

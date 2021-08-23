@@ -275,12 +275,20 @@ footer > .container {
 
 .section__buttons {
   margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn--section {
   background: none;
   border: 2px solid var(--clr-btn-gold);
   color: var(--clr-btn-gold);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btn--section + .btn--section {
+  margin-top: 1em;
 }
 
 .btn--section:focus,
@@ -328,5 +336,14 @@ footer > .container {
 
   .content-section--md {
     width: 50%;
+  }
+
+  .section__buttons {
+    flex-direction: row;
+  }
+
+  .btn--section + .btn--section {
+    margin-top: 0;
+    margin-left: 1em;
   }
 }
