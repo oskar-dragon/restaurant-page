@@ -1,6 +1,6 @@
-import createPage from "./main-page.js";
+import createMain from "./main-page.js";
 
-export { createHeader, createMain, createFooter };
+export { createHeader, createMainPage, createFooter };
 
 function createHeader() {
   const header = document.createElement("header");
@@ -87,11 +87,11 @@ function createNav() {
   return navEl;
 }
 
-function createMain() {
+function createMainPage() {
   const mainEl = document.createElement("main");
   mainEl.classList.add("page-content");
 
-  mainEl.appendChild(createPage());
+  mainEl.appendChild(createMain());
 
   return mainEl;
 }

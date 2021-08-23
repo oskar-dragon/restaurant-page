@@ -1,5 +1,5 @@
-import { createHeader, createMain, createFooter } from "./website.js";
+import { createHeader, createMainPage, createFooter } from "./website.js";
 
 document.body.appendChild(createHeader());
-document.body.appendChild(createMain());
+document.body.appendChild(createMainPage());
 document.body.appendChild(createFooter());
