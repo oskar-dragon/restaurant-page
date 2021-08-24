@@ -1,6 +1,6 @@
 # Restaurant
 
-> Simple website created with vanilla JavaScript
+> Simple website created with Webpack and JavaScript [Demo](https://competent-lamport-9f7d08.netlify.app/)
 
 ## Table of Contents
 
