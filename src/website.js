@@ -76,7 +76,17 @@ function createNav() {
     aEl.setAttribute("href", "#");
 
     aEl.addEventListener("click", e => {
-      console.log(e.target.id);
+      switch (e.target.id) {
+        case "our-cafes":
+          loadPage(createOurCafes());
+          break;
+        case "bakery":
+          loadPage(createBakery());
+          break;
+        default:
+          loadPage(createMain());
+          break;
+      }
     });
 
     aEl.innerText = page.name;
@@ -94,9 +104,15 @@ function createMainPage() {
   const mainEl = document.createElement("main");
   mainEl.classList.add("page-content");
 
-  mainEl.appendChild(createOurCafes());
+  mainEl.appendChild(createMain());
 
   return mainEl;
+}
+
+function loadPage(page) {
+  const mainEl = document.querySelector(".page-content");
+  mainEl.innerHTML = "";
+  mainEl.appendChild(page);
 }
 
 function createFooter() {
